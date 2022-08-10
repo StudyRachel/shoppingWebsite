@@ -106,18 +106,23 @@ html, body {
   color: coral;
 }
 .container #food-container #food-items #fruit #item-card {
-  background: rgb(202, 245, 138);
   width: 180px;
   height: 220px;
   padding: 10px;
   margin: 10px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 2px solid green;
   border-radius: 5px;
   background: white;
-  cursor: pointer;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
+  background: rgb(202, 245, 138);
 }
 .container #food-container #food-items #fruit #item-card #card-top {
   display: -webkit-box;
@@ -126,7 +131,6 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 5px 0;
 }
 .container #food-container #food-items #fruit #item-card #card-top i.fa-heart-o {
   padding: 6px;
@@ -142,12 +146,11 @@ html, body {
   border-radius: 14px;
 }
 .container #food-container #food-items #fruit #item-card img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin: auto;
   display: block;
-  margin-bottom: 5px;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
 }
@@ -156,16 +159,87 @@ html, body {
           transform: scale(1.2);
 }
 .container #food-container #food-items #fruit #item-card #item-name {
-  margin: 5px 0;
   font-weight: 600;
   color: darkslategray;
   font-size: 18px;
 }
 .container #food-container #food-items #fruit #item-card #item-price {
-  margin: 0;
   color: darkblue;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+}
+.container #food-container #food-items #noodle {
+  border: 2px solid rebeccapurple;
+  margin-top: 40px;
+}
+.container #food-container #food-items #noodle #category-name {
+  border: 2px solid green;
+  margin: 10px;
+  font-size: 35px;
+  color: coral;
+}
+.container #food-container #food-items #noodle #item-card {
+  width: 180px;
+  height: 220px;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid green;
+  border-radius: 5px;
+  background: white;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  background: rgb(202, 245, 138);
+}
+.container #food-container #food-items #noodle #item-card #card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container #food-container #food-items #noodle #item-card #card-top i.fa-heart-o {
+  padding: 6px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container #food-container #food-items #noodle #item-card #card-top #rating {
+  padding: 7px;
+  color: goldenrod;
+  background: black;
+  font-size: 14px;
+  border-radius: 14px;
+}
+.container #food-container #food-items #noodle #item-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+.container #food-container #food-items #noodle #item-card img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.container #food-container #food-items #noodle #item-card #item-name {
+  font-weight: 600;
+  color: darkslategray;
+  font-size: 18px;
+}
+.container #food-container #food-items #noodle #item-card #item-price {
+  color: darkblue;
+  font-weight: 500;
+  font-size: 18px;
 }
 .container #cart {
   background-color: aquamarine;

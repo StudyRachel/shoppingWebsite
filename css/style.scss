@@ -15,38 +15,57 @@
     font-size: 35px;
     color: coral;
 }
-
-@mixin itemCard {
+@mixin itemCard{
     width: 180px;
     height: 220px;
     padding: 10px;
     margin: 10px;   
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     border: 2px solid green;
     border-radius: 5px; 
     background: white;
-    cursor: pointer;
     transition: 0.5s all ease-in-out;
 }
-
+@mixin cardTop{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin iRating{
+    padding: 7px;
+    color: goldenrod;
+    background: black;
+    font-size: 14px;
+    border-radius: 14px;
+}
+@mixin iFaHeartO{
+    padding: 6px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
 @mixin itemCardImg {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     // border: 1px solid black;
     border-radius: 50%;
     margin: auto;
     display: block;
-    margin-bottom: 5px;
     transition: 0.5s all ease-in-out;
     &:hover{
         transform: scale(1.2);
     }
 }
 
-@mixin cardTop {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
+@mixin itemName {
+    font-weight: 600;
+    color: darkslategray;
+    font-size: 18px;
+}
+@mixin itemPrice {
+    color: darkblue;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 body{
@@ -139,38 +158,53 @@ html, body{
                     @include categoryName;
                 }
                 #item-card{
+                    @include itemCard;
+                    background: rgb(202, 245, 138);
                     #card-top{
                         @include cardTop;
                         i.fa-heart-o{
-                            padding: 6px;
-                            background: white;
-                            cursor: pointer;
-                            border-radius: 50%;
+                            @include iFaHeartO;
                         }
                         #rating{
-                            padding: 7px;
-                            color: goldenrod;
-                            background: black;
-                            font-size: 14px;
-                            border-radius: 14px;
+                            @include iRating;
                         }
                     }
-                    background: rgb(202, 245, 138);
-                    @include itemCard;
                     img{
                         @include itemCardImg;
                     }
                     #item-name{
-                        margin: 5px 0;
-                        font-weight: 600;
-                        color: darkslategray;
-                        font-size: 18px;
+                        @include itemName;
                     }
                     #item-price{
-                        margin: 0;
-                        color: darkblue;
-                        font-weight: 500;
-                        font-size: 16px;
+                        @include itemPrice;
+                    }
+                }
+            }
+            #noodle{
+                @include category;
+                #category-name{
+                    @include categoryName;
+                }
+                #item-card{
+                    @include itemCard;
+                    background: rgb(202, 245, 138);
+                    #card-top{
+                        @include cardTop;
+                        i.fa-heart-o{
+                            @include iFaHeartO;
+                        }
+                        #rating{
+                            @include iRating;
+                        }
+                    }
+                    img{
+                        @include itemCardImg;
+                    }
+                    #item-name{
+                        @include itemName;
+                    }
+                    #item-price{
+                        @include itemPrice;
                     }
                 }
             }
