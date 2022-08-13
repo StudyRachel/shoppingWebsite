@@ -95,9 +95,6 @@ html, body {
   color: white;
   background: crimson;
 }
-.container #food-container #food-items {
-  display: none;
-}
 .container #food-container #food-items #fruit {
   margin-top: 40px;
 }
@@ -413,7 +410,8 @@ html, body {
   font-weight: 500;
   font-size: 18px;
 }
-.container #food-container #cart-page {
+.container #food-container div#cart-page {
+  display: none;
   border: 2px solid green;
   background: white;
   margin: 40px 50px 40px 10px;
@@ -421,30 +419,35 @@ html, body {
   padding: 20px 30px 30px;
   position: relative;
 }
-.container #food-container #cart-page #cart-title {
+.container #food-container div#cart-page #cart-title {
   font-size: 35px;
   margin: 0;
   color: indianred;
 }
-.container #food-container #cart-page #m-total-amount {
+.container #food-container div#cart-page #m-total-amount {
   display: none;
 }
-.container #food-container #cart-page table {
+.container #food-container div#cart-page table {
   border: 2px solid red;
   width: 100%;
   margin-top: 20px;
   text-align: center;
 }
-.container #food-container #cart-page table thead td {
+.container #food-container div#cart-page table thead td {
   font-size: 25px;
   padding-bottom: 10px;
 }
-.container #food-container #cart-page table tbody tr td {
+.container #food-container div#cart-page table tbody tr td {
   border: 2px solid yellow;
   padding: 10px 0;
   font-size: 20px;
 }
-.container #food-container #cart-page table tbody tr td button {
+.container #food-container div#cart-page table tbody tr td img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.container #food-container div#cart-page table tbody tr td button {
   border: none;
   outline: none;
   font-size: 16px;
@@ -526,4 +529,38 @@ html, body {
   font-size: 20px;
   margin: 0 10px;
   color: rgb(227, 122, 46);
+}
+.container #cart div#checkout {
+  display: none;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 5px;
+  background: white;
+  padding: 20px;
+}
+.container #cart div#checkout p {
+  margin: 15px auto;
+  float: left;
+}
+.container #cart div#checkout p:nth-child(1), .container #cart div#checkout p:nth-child(2) {
+  font-size: 20px;
+  color: indianred;
+}
+.container #cart div#checkout #delievery {
+  font-size: 20px;
+  color: limegreen;
+}
+.container #cart div#checkout .cart-btn {
+  font-size: 18px;
+  margin: 0 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid crimson;
+  color: crimson;
+  cursor: pointer;
+  background: none;
+}
+.container #cart div#checkout .cart-btn:active {
+  color: white;
+  background: crimson;
 }/*# sourceMappingURL=style.css.map */
